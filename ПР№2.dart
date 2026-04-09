@@ -87,7 +87,7 @@ void main() {
     uniqueGrades.addAll(studentGrades);
   }
   
-  List<int> sortedGrades = uniqueGrades.toList();
+  List<int> sortedGrades = uniqueGrades.toList()..sort();
   sortedGrades.sort();
   print("Оценки в журнале: $sortedGrades");
   print("");
@@ -123,33 +123,30 @@ void main() {
   }
   print("");
 
-  print("СТУДЕНТЫ С РОВНО ОДНОЙ ДВОЙКОЙ");
-  for (int i = 0; i < students.length; i++) {
-    int twoCount = 0;
-    String twoSubject = "";
-    
-    for (int j = 0; j < subjects.length; j++) {
-      if (grades[i][j] == 2) {
-        twoCount++;
-        twoSubject = subjects[j];
-      }
-    }
-    
-    if (twoCount == 1) {
-      print("${students[i]} - двойка по предмету $twoSubject");
+ print("СТУДЕНТЫ С РОВНО ОДНОЙ ДВОЙКОЙ");
+bool foundTwo = false;
+
+for (int i = 0; i < students.length; i++) {
+  int twoCount = 0;
+  String twoSubject = "";
+  
+  for (int j = 0; j < subjects.length; j++) {
+    if (grades[i][j] == 2) {
+      twoCount++;
+      twoSubject = subjects[j];
     }
   }
   
-  if (students.every((s) {
-    int count = 0;
-    for (int j = 0; j < subjects.length; j++) {
-      if (grades[students.indexOf(s)][j] == 2) count++;
-    }
-    return count != 1;
-  })) {
-    print("Нет студентов с ровно одной двойкой");
+  if (twoCount == 1) {
+    print("${students[i]} - двойка по предмету $twoSubject");
+    foundTwo = true;
   }
-  print("");
+}
+
+if (foundTwo == false) {
+  print("Нет студентов с ровно одной двойкой");
+}
+print("");
 
   print("ПРЕДМЕТЫ ВЫШЕ ОБЩЕГО СРЕДНЕГО");
   print("Общий средний балл: ${totalAvg.toStringAsFixed(2)}");

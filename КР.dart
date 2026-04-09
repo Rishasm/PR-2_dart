@@ -651,3 +651,674 @@ Iterable<int> iter(int start, int end) sync* {
         a++;
     }
 }
+
+//КР 20.03
+```dart
+// Iterable<int> iter(int start, int end) sync*{
+//     int a=start;
+//     while(a<end){
+//     yield a;
+//     a++;
+//     }
+// }
+
+// тип имя_функции(){
+// выполняемое выражение
+//}
+int global=45;
+const global1="global";
+
+void main() {
+    user1("Николова", "Анастасия", "Александровна");
+    user2("Николова", "Анастасия");
+    user3("Николова", "Анастасия");
+    printText("text:", "header: ", "5");
+    printText("text: ", "g");
+    h(4,5);
+    h(6,7);
+    print(div2(6,7));
+    print(div5(6,7));
+    print(div6(7,8));
+}
+
+void hello() {
+    print("hello");
+    String hello="hell";
+    print(hello);
+}
+
+void hello()=>print("hello");
+
+void sum(int a, int b) {
+    print(a+b*3);
+}
+
+void sum1(int a, int b) {
+    int c=a+b;
+    print(c);
+}
+
+void printText({ required String text, String header="...", String? footer }) {
+    print(header);
+}
+
+const a1=5;
+
+void h(int a, int v) {
+    final a1=a;
+    final v1=v;
+    print(a1);
+    print(v1);
+}
+
+int div2(int a, int b) {
+    return a*b;
+}
+
+int div3(int a, int b) {
+    return a * b;
+}
+
+div5(int a, int b) {
+    return a * b;
+}
+
+void user1(String name, String surname, String lastName) {
+    print(name);
+    print(surname);
+    print(lastName);
+}
+
+void user2(String name, String surname, [String? lastName, int? age]) {
+    if(lastName != null && age != null){
+        print("$surname, $name, $lastName, $age");
+    } else if(lastName != null){
+        print("$surname, $name, $lastName");
+    } else {
+        print("$name $surname");
+    }
+}
+
+void user3(String name, String surname, String lastName) {
+    print("$surname $name $lastName");
+}
+
+void printText([String text="Нет текста", String header="Нет заголовка"]) {
+    print(text);
+    print(header);
+}
+
+void printfText([String text="Нет текста", String header="Нет заголовка"]) {
+    print(text);
+    print(header);
+}
+
+void printTxt(String text, [String? header]) {
+    print(text);
+    if(header != null) print(header);
+}
+
+void dif(int a, int b) {
+    print(a-b);
+}
+
+void div(double a, double b) {
+    if(b != 0) print(a/b);
+}
+
+void helllo() {
+    print("hello");
+    String hello="hell";
+    print(hello);
+}
+
+void sum(int a, int b) {
+    print(a+b);
+}
+
+void sum1(int a, int b) {
+    int c=a+b;
+    print(c);
+}
+
+void main() {
+    hello();
+    sum(4,5);
+    sum1(3,4);
+    dif(3,5);
+    div(5,6);
+    user1("Никонова","Анастасия","Александровна");
+    user1("Никонова","Анастасия");
+    user2("Никонова","Анастасия");
+    user2("Никонова","Анчастия","Александровна",7);
+    printfText();
+    printfText(text:"f",header: "5");
+    printfText(text: "g");
+    h(4,5);
+    h(6,7);
+}
+
+void main() {
+    user1("Николова", "Анастасия");
+    user2("Николова", "Анастасия", "Александровна", 7);
+    printTxt("Hello, world!");
+    printTxt("text: ", "g");
+    h(4,5);
+    h(6,7);
+    print(div2(6,7));
+    print(div5(6,7));
+}
+
+void main() {
+    user1("Николова", "Анастасия", "Александровна");
+    user2("Николова", "Анастасия");
+    print(Txt("f: f", header: "5"));
+    print(Txt("g"));
+    h(4,5);
+    h(6,7);
+    div2(6,7);
+}
+
+void main() {
+    user1("Никонова", "Анастасия", "Александровна");
+    user2("Никонова", "Анастасия");
+    user3("Никонова", "Анастасия");
+    printText("text:", "header: ", "5");
+    printText("text: ", "g");
+    h(4,5);
+    h(6,7);
+    print(div2(6,7));
+    print(div5(6,7));
+    print(div6(7,8));
+}
+
+void main() {
+    String local_main="local_main";
+    if(true){
+        int local_if=6;
+        print(global);
+        local_main="Gh";
+        print(local_main);
+        print(local_if);
+    }
+    print(local_main);
+    print(global);
+    hello();
+}
+
+void main() {
+    int local_if=6;
+    print(global);
+    String local_main="Gh";
+    print(local_main);
+    print(local_if);
+    print(local_main);
+    print(global);
+    helllo();
+    hello();
+    sum(4,5);
+    sum1(3,4);
+    dif(3,5);
+    div(5,6);
+    user("Никонова","Анастасия","Александровна");
+}
+
+void main() {
+    var (a, b) {
+        print(a * b);
+    }
+    user(String name, String surname, String lastName) {
+        print(name);
+        print(surname);
+        print(lastName);
+    }
+
+
+(String name, String surname, [String? lastName]) {
+        if (lastName != null) {
+            print("$surname, $name, $lastName");
+        } else {
+            print("$name $surname");
+        }
+    }
+}
+
+void main() {
+    printf("hello world");
+    print(local_if);
+    print(local_main);
+    print(global);
+    helllo();
+    hello();
+    sum(4,5);
+}
+
+void main() {
+    hello();
+    hello();
+    sum(4,5);
+    sum1(3,4);
+}
+
+void main() {
+    helllo();
+    hello();
+}
+
+void main() {
+    print(local_main);
+    print(local_if);
+    print(local_main);
+    print(global);
+    helllo();
+    hello();
+    sum(4,5);
+    sum1(3,4);
+    dif(3,5);
+    div(5,6);
+    user("Никонова","Анастасия","Александровна");
+    user1("Никонова", "Анастасия");
+}
+
+main() {
+    sum(4,5);
+    sum1(3,4);
+    dif(3,5);
+    div(5,6);
+    user("Никонова", "Анастасия", "Александровна");
+    user1("Никонова", "Анастасия");
+}
+
+void user(String name,String surname,String lastName){
+    print(name);
+    print(surname);
+    print(lastName);
+}
+
+void user1(String name,String surname,[String? lastName]){
+    if(lastName != null){
+        print("$surname, $name, $lastName");
+    } else {
+        print("$name $surname");
+    }
+}
+
+id dif(a,b){
+    print(a-b);
+}
+
+(a,b){
+    print(a*b);
+}
+
+id user1(String name,String surname,String lastName){
+    print(name);
+    print(surname);
+    print(lastame);
+}
+
+void main() {
+    hello();
+    // print(hello);
+    sum(4,5);
+    sum1(3,4);
+    div(5,6);
+    user1("Николова", "Анастасия", "Александровна");
+    user2("Николова", "Анастасия");
+    user1("Николова", "Анастасия");
+    user2("Николова", "Анастасия");
+    printText("text:", "header: ", "5");
+    printText("text: ", "g");
+    h(4,5);
+    h(6,7);
+    print(div2(6,7));
+    print(div5(6,7));
+    print(div6(7,8));
+    var f=sumDiv(4,5);
+    print(f);
+}
+
+void hello() {
+    print("hello");
+    String hello="hell";
+    print(hello);
+}
+
+void main() {
+    h(6,7);
+    print(div2(6,7));
+    print(div5(6,7));
+    print(div6(7,8));
+    var f = sumDif(4,5);
+    print(f);
+    userAge(6);
+    userAge(500);
+    Function func=hello;
+    print(func);
+    func();
+    func();
+}
+
+void hello() {
+    print("hello");
+    String hello="hell";
+    print(hello);
+}
+
+void hello()=>print("hello");
+
+void sum(int a,int b){
+    print(a+b+3);
+}
+
+void main() {
+    print(div2(6,7));
+    print(div5(6,7));
+    print(div6(7,8));
+    var f=sumDif(4,5);
+    print(f);
+    userAge(6);
+    userAge(500);
+    Function func=hello;
+    func();
+    func();
+}
+
+void hello() {
+    print("hello");
+    String hello="hell";
+    print(hello);
+}
+
+void sum(int a, int b){
+    print(a+b*3);
+}
+
+void main() {
+    printText("text:", "header: " + "5");
+    printText("text: ", "g");
+    h(4,5);
+    h(6,7);
+    print(div2(6,7));
+    print(div5(6,7));
+    print(div6(7,8));
+    var f = sumDif(4,5);
+    print(f);
+    userAge(6);
+    userAge(500);
+    Function func=hello;
+    func();
+    func();
+}
+
+void hello() {
+    print("hello");
+    String hello="hell";
+    print(hello);
+}
+
+
+Function func = calculate;
+
+void main() {
+  print(calculate(10, 5, "+"));
+  print(calculate(10, 5, "-"));
+  print(calculate(10, 5, "*"));
+  print(calculate(10, 5, "/"));
+  print(calculate(10, 0, "/"));
+  print(calculate(10, 5, "%"));
+}
+
+calculate(double a, double b, String operation) {
+  if (operation == "+") {
+    return a + b;
+  } else if (operation == "-") {
+    return a - b;
+  } else if (operation == "*") {
+    return a * b;
+  } else if (operation == "/") {
+    if (b == 0) {
+      return null;
+    }
+    return a / b;
+  } else {
+    return null;
+  }
+}
+
+
+
+
+//КР 27.03
+void main() {
+    int Function(int,int) func = sum;
+    print(func(4,5));
+    operation(5, 6, (x,y)=>x*y);
+    operation(5, 6, (x,y)=>x+y);
+    operation(5, 6, (x,y)=>x-y);
+    operation(5, 6, sum);
+}
+
+var counter = makeCounter();
+print(counter());
+print(counter());
+print(counter());
+
+printRes(add,7,8);
+void d = void Function() > [];
+var mult = Mult(5);
+print(mult(6));
+
+int sum(int a,int b)=> a+b;
+
+void operation(int x,int y, int Function(int,int) f){
+    int result = f(x,y);
+    print(result);
+}
+
+Function makeCounter(){
+    int count = 0;
+    return (){
+        count++;
+        return count;
+    };
+}
+
+typedef Op = int Function(int a,int b);
+
+
+void printRes(Op oper,int x,int y){
+    print(oper(x,y));
+}
+
+int add(int a,int b)=>a+b;
+
+class Mult{
+    final int g;
+
+    Mult(this.g);
+
+    int call(int value)=>g*value;
+
+    void func(int n, void Function() f){
+        for(int i=0; i<n; i++){
+            f();
+        }
+    }
+}
+
+callback(()=>print("Конёк"));
+var s = make(5);
+print(s(7));
+print(s(5));
+
+void callback(void Function() j){
+    print("Начинается работа функции");
+    print("работа функции завершена");
+}
+
+int Function(int) make(int c){
+    return (int x){
+        return c * x;
+    };
+}
+
+int rek(int n int m) {}
+void callback(void Function() j){
+    print("Начинается работа функции");
+    print("работа функции завершена");
+    j();
+}
+
+int Function(int) make(int c){
+    return(int x){
+    return c*x;
+    };
+}
+
+int rek(int n,int m){
+    if(m==0){
+    return 1;
+    }
+    return n* rek(n,m-1);
+}
+
+String str(String word){
+    if(word.isEmpty()){
+    return "";
+    }
+    return str(word.substring(1))+word[0];
+}
+
+
+
+
+
+
+
+//КР 01.04
+import 'dart:';
+enum Status{
+    processing,
+    ready;
+}
+
+enum Day {
+    mon,
+    tue,
+    wed,
+    thu,
+    fri,
+    sat,
+    sun
+};
+
+void statusShow(int status) {
+    if (status == 1) {
+        print("обработка заказа");
+    } else if (status == 2) {
+        print("выдача");
+    }
+}
+
+void statusShow1(Status status) {
+    if (status == Status.processing) {
+        print("обработка заказа");
+    } else if (status == Status.ready) {
+        print("выдача");
+    }
+}
+
+int main() {
+    statusShow(1);
+    statusShow1(Status.processing);
+    
+    Day today = Day.wed;
+    
+    switch (today) {
+        case Day.mon:
+            print("5 nap");
+            break;
+        case Day.tue:
+            print("5 nap");
+            break;
+        case Day.wed:
+            print("4 nap");
+            break;
+        default:
+            print("5 nap");
+
+for (var i in Status.values) {
+    print(i);
+    print(i.name);
+    print(i.index);
+  }
+}
+
+String s ="ABC";
+print(s);
+print(s.runes);
+print(s.runes.first.toRadixString(16));
+
+print(String.fromCharCode(65));
+
+String smile="💋";
+print(smile);
+print(smile.length);
+
+String family="👨🏻‍👩🏻‍👦🏻‍👦🏻";
+print(family);
+print(family.length);
+print(family.runes.first.toRadixString(16));
+String f="\u{1f468}";
+print(f);
+String f1="\u{1f467}";
+print(f1);
+String exhalingFace = '\u{1F62E}\u{200D}\u{1F4A8}';
+print(exhalingFace);
+String heartOnFire = '❤️\u{200D}🔥';
+print(heartOnFire);
+String vs="😤";
+print(vs.runes);
+
+
+enum Role {
+  admin('admin', 1),
+  user('user', 3),
+  owner('product', 2);
+
+  final String login;
+  final int priority;
+
+  const Role(this.login, this.priority);
+
+      for (var i in Role.values) {
+        print(i);
+        print(i.name);
+        print(i.index);
+        print(i.login);
+        print(i.priority);
+  }
+}
+
+void statusShow(int status) {
+    if (status == 1) {
+        print("обработка заказа");
+    } else if (status == 2) {
+        print("выдача");
+    }
+}
+
+void statusShow1(Status status) {
+    if (status == Status.processing) {
+        print("обработка заказа");
+    } else if (status == Status.ready) {
+        print("выдача");
+    }
+}
+
+int main() {
+    statusShow(1);
+    statusShow1(Status.processing);
+    return 0;
+}
